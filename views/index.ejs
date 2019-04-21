@@ -1,7 +1,7 @@
 
 <% include partials/header %> 
+   
 <div class="container">
-
     <header class="container jumbotron">
         <h1>Welcome to Yelpcamp!</h1>
         <p>view our hand-picked campgrounds from all over the world</p>
@@ -16,6 +16,9 @@
                                 <div class="caption">
                                      <h4><%= campground.name%></h4>       
                                 </div>
+                                <p>
+                                    <a href="/campgrounds/<%=campground._id %>" class="btn btn-primary">More Info</a>
+                                </p>
                         </div>
                  </div>
              <% }); %>
