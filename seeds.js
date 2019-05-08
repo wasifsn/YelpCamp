@@ -18,7 +18,7 @@ var data = [{ name:"mumbai",
 ];
 
 function seedDB(){
-Campground.deleteMany(function(err, removeCampground){
+Campground.deleteMany(function(){
     if (err) {
         console.log(err);
     } else {
