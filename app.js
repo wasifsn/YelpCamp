@@ -18,16 +18,16 @@ var commentRoutes         = require("./routes/comments"),
     
 // mongoose.connect("mongodb://localhost/yelp_camp");
 // mongoose.connect('mongodb://localhost:27017/yelp_camp', { useNewUrlParser: true }); // new syntax of connecting mongoose
-mongoose.connect(process.env.DATABASEURL , { useNewUrlParser: true }); // new syntax of connecting mongoose
+// mongoose.connect(process.env.DATABASEURL , { useNewUrlParser: true }); // new syntax of connecting mongoose
 
-// mongoose.connect("mongodb+srv://wasif:powershoT@777@cluster0-8gech.mongodb.net/test?retryWrites=true" , { 
-//     useNewUrlParser: true,
-//     useCreateIndex: true
-// }).then(() =>{
-//   console.log("connected to DB");
-// }).catch(err => {
-//   console.log("ERROR:" , err.message);  
-// }); // new syntax of connecting mongoose
+mongoose.connect(process.env.DATABASEURL , { 
+    useNewUrlParser: true,
+    useCreateIndex: true
+}).then(() =>{
+  console.log("connected to DB");
+}).catch(err => {
+  console.log("ERROR:" , err.message);  
+}); // new syntax of connecting mongoose
 
 app.use(flash());
 app.set("view engine", "ejs");
