@@ -19,7 +19,7 @@ var commentRoutes         = require("./routes/comments"),
 // mongoose.connect("mongodb://localhost/yelp_camp");
 // mongoose.connect('mongodb://localhost:27017/yelp_camp', { useNewUrlParser: true }); // new syntax of connecting mongoose
 
-mongoose.connect(process.env.DATABASEURL , { 
+mongoose.connect(process.env.DATABASEURL, { 
     useNewUrlParser: true,
     useCreateIndex: true
 }).then(() =>{
